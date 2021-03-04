@@ -15,7 +15,7 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     $('.carousel').carousel({
-      interval: 120000
+      interval: 10000
     })
 
     this.getEquipments()
