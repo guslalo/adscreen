@@ -1,0 +1,96 @@
+
+#slider1 {
+    .boxButtons {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+.header                 { width:100%; display: inline-block;  z-index: 2;  position: relative;}
+.header .boxSvg         {  z-index: 0; }
+.header .boxSvg svg     { width:90%; position: absolute; top: -15px; left: 0px; }
+.header .boxText        { padding: 17px 33px; position: relative; z-index: 1; color: #ffffff;  }
+.header .boxText .marca { margin-bottom: 10px; }
+.header .boxText .title { margin-bottom: 5px; font-size: 1.5rem;}
+.header .boxText .color { }
+
+.main            { margin-top: 10px; display: inline-block; width: 100%; }
+.main .cuotas    { text-align: center; color:#055BFC; }
+.main .cuotas p  { font-size: 1.5rem; margin:7px 0px 15px;  }
+.main .cuotas h3 { font-size: 4.5rem; }
+
+.position-right svg                    { float: right; width: 95%;}
+.position-right img                    { float: right; width: 95%;}
+.boxDetalles                           { position: relative; width:100%; }
+.boxDetalles .boxSvg                   { position: absolute; z-index: 0;  right: 0px; width: 100%; }
+.boxDetalles .boxText                  { 
+    color:#ffffff;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500; 
+}
+.boxDetalles .boxText                  { 
+    position: relative; z-index: 2; float: right; text-align:center; margin: 80px 0px 0px 1px; width:80%; max-width: 300px; padding: 0px 35px 0px 0px;}
+.boxDetalles .boxText .oferta          { color: #FD6C98; font-size: 1.22rem;  }
+.boxDetalles .boxText .subTitle        { color: #055BFC; font-size: 1.3rem; margin: 12px 0px 0px 0px; text-align: right; }
+.boxDetalles .boxText .desde           { color: #055BFC; font-size: 2.5rem; }
+.boxDetalles .boxText .cargo           { color: #055BFC; font-size: 1rem; text-align: right; }
+.boxDetalles .boxText .boxIcons img    { width: 75%; margin-top: 10px; }
+.boxDetalles .boxText .precioNoCliente { margin:25px 0px 0px 0px; color: #055BFC; font-size:1.2rem;}
+}
+
+.light-text {
+    font-weight: 300;
+    text-align: left;
+}
+
+.text-accesorio {
+    p {
+        &.marca {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        &.model {
+            font-weight: 300;
+            font-size: 15px;
+        }
+        &.price {
+            font-size: 30px;
+            font-weight: 500;
+        }
+    }
+}
+
+ul {
+    &.lista {
+        margin-top:20px;
+        li {
+            margin-bottom: 18px;
+            span {
+                img {
+                    margin-right: 10px;
+                }
+            }
+            color:#ffffff;
+            list-style: none;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+.desde {
+    position: relative;
+    color: #ffffff;
+  
+    p {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        top: 5px;
+    }
+    img {
+        position: absolute;
+        z-index: 1;
+        top: 0px;
+    }
+}

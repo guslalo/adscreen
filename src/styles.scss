@@ -1,1 +1,117 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css');
+//@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,700,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,300&display=swap');
+html, body{
+width: 100%;
+height: 100%;
+background: #fff;
+font-size: 1rem;
+margin: 0;
+padding: 0;
+font-family: 'Barlow', sans-serif;
+
+}
+
+
+p, h3 { margin: 0px 0px; }
+
+.carousel-indicators {
+    li {
+        background-color: #DEDEDE;
+        &.active {
+            background-color: #055BFC;
+        }
+    }
+}
+
+.btn-danger {
+    background: #FD6C98;
+    border-color:#FD6C98;
+}
+
+.wrap                   { 
+    width: 100%; height: auto; 
+    -webkit-animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s; 
+    animation: fadein 1.5s;
+    padding-bottom: 80px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.btn {
+    border-radius: 7px;
+}
+
+.boxButtons {
+    text-align: center;
+    margin-top: 30px;
+    buttton {
+        margin-right: 5px;
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Pulse Shrink */
+@-webkit-keyframes hvr-pulse-shrink {
+to {
+-webkit-transform: scale(0.9);
+transform: scale(0.9);
+}
+}
+@keyframes hvr-pulse-shrink {
+to {
+-webkit-transform: scale(0.9);
+transform: scale(0.9);
+}
+}
+.hvr-pulse-shrink {
+display: inline-block;
+vertical-align: middle;
+-webkit-transform: perspective(1px) translateZ(0);
+transform: perspective(1px) translateZ(0);
+box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+-webkit-animation-name: hvr-pulse-shrink;
+animation-name: hvr-pulse-shrink;
+-webkit-animation-duration: 0.3s;
+animation-duration: 0.3s;
+-webkit-animation-timing-function: linear;
+animation-timing-function: linear;
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+animation-direction: alternate;
+}
+
+.hvr-pulse-shrink2 {
+display: inline-block;
+vertical-align: middle;
+-webkit-transform: perspective(1px) translateZ(0);
+transform: perspective(1px) translateZ(0);
+box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+-webkit-animation-name: hvr-pulse-shrink;
+animation-name: hvr-pulse-shrink;
+-webkit-animation-duration: 0.6s;
+animation-duration: 0.6s;
+-webkit-animation-timing-function: linear;
+animation-timing-function: linear;
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+animation-direction: alternate;
+}
+
+.hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+
+}
+
+
