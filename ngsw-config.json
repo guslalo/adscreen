@@ -26,5 +26,17 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+    "name": "adscreen-api",
+    "urls": ["https://rinnolab.cl/devices/"],
+    "cacheConfig": {
+      "strategy": "freshness",
+      "maxSize": 300,
+      "maxAge": "1h",
+      "timeout": "5s"
+      }
+    }
   ]
 }
