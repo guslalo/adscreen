@@ -19,6 +19,8 @@ export class IndexComponent implements OnInit {
     })
 
     this.getEquipments()
+
+    
   }
 
   getEquipments(){
