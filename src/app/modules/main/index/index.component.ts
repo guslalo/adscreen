@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ApiService } from '../../../services/api.service'
 declare var $:any
+
 
 @Component({
   selector: 'app-index',
@@ -22,6 +23,22 @@ export class IndexComponent implements OnInit {
 
     
   }
+
+
+  /*
+  @HostListener('window:message', ['$event'])
+    onMessage(event) {
+      window.print.postMessage('close');
+  }*/
+
+
+  alertMessage() {
+    /*window.addEventListener('close',function(event) {
+    .postMessage('close');
+    });*/
+  }
+ 
+
 
   getEquipments(){
     this.apiService.getEquipments().subscribe(

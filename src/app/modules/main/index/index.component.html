@@ -2,7 +2,6 @@
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner" >
         <!--item-->
@@ -61,7 +60,7 @@
                 <!--main-->
                 <div class="main">
 
-                    <div class="cuotas">
+                    <div class="cuotas mt-3">
                         <p class="animated  bounceInLeft" style="animation-delay:0.2s;">
                             {{equipo.equipment.equipment_details[0].adscreen[0].equipment_plan[0].cuote_number}} cuotas sin interés de
                         </p>
@@ -74,30 +73,34 @@
                         </div>
                         <div class="boxText">
                             <div class="oferta mt-2">Precio oferta cliente: <b>${{equipo.equipment.equipment_details[0].adscreen[0].equipment_plan[0].price_1}}</b></div>
-                            <div class="subTitle animated bounceInLeft text-left" style="animation-delay:1.3s">
+                            <div class="subTitle animated bounceInLeft text-right" style="animation-delay:1.3s">
                                 Portándote a planes
                             </div>
-                            <div class="desde animated bounceInLeft font-weight-bold text-left" style="animation-delay:1.5s">
+                            <div class="desde animated bounceInLeft font-weight-bold text-right" style="animation-delay:1.5s">
                                 <span class="text-desde">desde</span> 
                                 <span class="hvr-pulse-shrink2">${{equipo.equipment.equipment_details[0].adscreen[0].plan[0].price_1}}</span>
                             </div>
                             <div class="cargo mt-1">Cargo fijo mensual</div>
-                            <div class="boxIcons mt-2">
+                            <div class="boxIcons mt-1">
                                 <img src="https://rinnolab.cl/media/upload/images/2020/11/orig/rrss.png">
                             </div>
                             <div class="precioNoCliente">Precio no cliente: <b>${{equipo.equipment.equipment_details[0].price_1}}</b></div>
                         </div>
                     </div>
                 </div><!--/main-->
-                <div class="boxaudifonos text-center mt-5">
+                <div class="boxaudifonos text-center">
                     <img src="assets/img/audifonos.png">
+                    <div class="texts pl-2">
+                        <p class="marca font-weight-bold">{{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].provider_name}}</p>
+                        <p class="modelo">{{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].accessory_name}}</p>
+                    </div>
                 </div>
                 <!--buttons-->
                 <div class="boxButtons">
                   
                     <button type="button" class="btn btn-primary mr-3">Ir al equipo</button>
 
-                    <button type="button" class="btn btn-danger">llévame con este accesorio</button>
+                    <button type="button" class="btn btn-danger" routerLink="detail-accessory">llévame con este accesorio</button>
                    
                     
                 </div>
@@ -109,10 +112,6 @@
         <div class="carousel-item">
             <app-slide2></app-slide2>
         </div><!--/item-->
-        
-        <!--item-->
-        <div class="carousel-item">
-            <app-slide3></app-slide3>
-        </div><!--/item-->   
+
     </div>
   </div>

@@ -43,9 +43,9 @@
             <div class="boxText">
                 <div class="marca">
                     <!--<svg xmlns="http://www.w3.org/2000/svg" width="16.239" height="19.799" viewBox="0 0 16.239 19.799"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-46.022)"><path class="a" d="M51.406,133.2c-2.947-.017-5.384-6.032-5.384-9.1,0-5,3.754-6.1,5.2-6.1a5.984,5.984,0,0,1,1.962.483,4.386,4.386,0,0,0,1.12.321,3.487,3.487,0,0,0,.8-.261,6.442,6.442,0,0,1,2.423-.586h.006a4.966,4.966,0,0,1,4.155,2.1l.3.455-.436.329a3.67,3.67,0,0,0-1.76,3.027,3.416,3.416,0,0,0,1.906,3.158c.273.164.556.334.556.7,0,.242-1.93,5.436-4.734,5.436a3.807,3.807,0,0,1-1.6-.388,3.242,3.242,0,0,0-1.423-.343,3.659,3.659,0,0,0-1.127.3,5.519,5.519,0,0,1-1.954.456Z" transform="translate(0 -113.397)"/><path class="a" d="M258.874,0c.073,2.632-1.81,4.459-3.69,4.344A4.2,4.2,0,0,1,258.874,0Z" transform="translate(-201.045)"/></g></svg> -->
-                    {{equipo.equipment.provider.name}}
+                    {{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].provider_name}}
                 </div>
-                <div class="title">{{equipo.equipment.name}} {{equipo.equipment.equipment_details[0].memory}}GB</div>
+                <div class="title"> {{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].accessory_name}}</div>
             </div>
         </div><!--/header-->
         <!--main-->
@@ -58,15 +58,15 @@
                                 <img src="assets/img/slider3/bg-rosado.png">
                             </div>
                             <div class="boxText animated bounceInRight" style="animation-delay:0.35s">
-                                <p class="light-text">Llévame</p>
-                                <h5 class=" text-left">con este Accesorio</h5>
+                                <p class="light-text font-italic">Llévame</p>
+                                <h5 class=" text-left">con este accesorio</h5>
                                 <img class="text-left mt-2 mb-2 img-fluid" [src]="equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].accessory_image" style="height:150px" >
                                 <div class="text text-accesorio">
-                                    <p class="marca">{{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].provider_name}}</p>
-                                    <p class="model">
+                                    <p class="marca d-none">{{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].provider_name}}</p>
+                                    <p class="model d-none">
                                         {{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].accessory_name}}
                                     </p>
-                                    <p class="price hvr-pulse-shrink2" style="animation-delay:1.5s">${{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].customer_price}}</p>
+                                    <p class="price font-weight-bold hvr-pulse-shrink2 mt-1" style="animation-delay:1.5s">${{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].customer_price}}</p>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
         <!--buttons-->
         <div class="boxButtons">
             <button type="button" class="btn btn-primary mr-3">Ir al equipo</button>
-            <button type="button" class="btn btn-danger pl-5 pr-5"  data-target="#carouselExampleIndicators" data-slide-to="0">
+            <button type="button" class="btn btn-danger pl-5 pr-5"  routerLink="/">
                 <span>
                     <img src="assets/icons/left-arrow.svg">
                 </span>

@@ -5,17 +5,18 @@
         margin-top: 30px;
     }
     
-.header                 { width:100%; display: inline-block; }
+.header                 { width:100%; display: inline-block;  position: relative;
+    z-index: 3;}
 .header .boxSvg         {  z-index: 0; }
-.header .boxSvg svg     { width:90%; position: absolute; top: -15px; left: 0px; }
-.header .boxText        { padding: 17px 33px; position: relative; z-index: 1; color: #ffffff;  }
+.header .boxSvg svg     { width:90%; position: absolute; top: -45px; left: 0px; }
+.header .boxText        { padding: 12px 20px; position: relative; z-index: 1; color: #ffffff;  }
 .header .boxText .marca { margin-bottom: 10px; }
-.header .boxText .title { margin-bottom: 5px; font-size: 1.5rem;}
+.header .boxText .title { margin-bottom: 5px; font-size: 1.5rem; line-height: 15px;}
 .header .boxText .color { }
 
 .main            { margin-top: 10px; display: inline-block; width: 100%; }
 .main .cuotas    { text-align: center; color:#055BFC; }
-.main .cuotas p  { font-size: 1.5rem; margin:7px 0px 15px;  }
+.main .cuotas p  { font-size: 1.5rem; margin:7px 0px 10px;  }
 .main .cuotas h3 { font-size: 4.5rem; }
 
 .position-right svg                    { float: right; width: 95%;}

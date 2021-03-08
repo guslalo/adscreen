@@ -35,7 +35,7 @@ p, h3 { margin: 0px 0px; }
     -webkit-animation: fadein 1.5s;
     -moz-animation: fadein 1.5s; 
     animation: fadein 1.5s;
-    padding-bottom: 80px;
+    padding-bottom: 30px;
     font-family: 'Barlow', sans-serif;
 }
 
@@ -45,7 +45,7 @@ p, h3 { margin: 0px 0px; }
 
 .boxButtons {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     buttton {
         margin-right: 5px;
     }
@@ -118,3 +118,10 @@ animation-direction: alternate;
     transition-duration: 0.3s;
 }
 
+.carouselExampleIndicators {
+    overflow:hidden;
+}
+
+.carousel-indicators {
+    bottom: -25px;
+}
