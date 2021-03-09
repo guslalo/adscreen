@@ -12,7 +12,6 @@ export class Slide3Component implements OnInit {
   public cuota:any
   constructor(public apiService: ApiService) { }
 
-
   ngOnInit(): void {
     this.getEquipments()
   }
