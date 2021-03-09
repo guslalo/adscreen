@@ -17,6 +17,10 @@ export class Slide3Component implements OnInit {
     this.getEquipments()
   }
 
+  alertMessage() {
+    window.parent.postMessage('close', '*');
+  }
+
   getEquipments(){
     this.apiService.getEquipments().subscribe(
       data => {

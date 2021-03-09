@@ -66,7 +66,7 @@
                                     <p class="model d-none">
                                         {{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].accessory_name}}
                                     </p>
-                                    <p class="price font-weight-bold hvr-pulse-shrink2 mt-1" style="animation-delay:1.5s">${{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].customer_price}}</p>
+                                    <p class="price font-weight-bold hvr-pulse-shrink2 mt-1" style="animation-delay:1.5s">${{equipo.equipment.equipment_details[0].adscreen[0].accessory_details[0].customer_price | safe:'price'}}</p>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
       
         <!--buttons-->
         <div class="boxButtons">
-            <button type="button" class="btn btn-primary mr-3">Ir al equipo</button>
+            <button type="button" class="btn btn-primary mr-3" (click)="alertMessage()">Ir al equipo</button>
             <button type="button" class="btn btn-danger pl-5 pr-5"  routerLink="/">
                 <span>
                     <img src="assets/icons/left-arrow.svg">

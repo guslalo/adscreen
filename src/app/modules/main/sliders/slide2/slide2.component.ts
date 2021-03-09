@@ -29,4 +29,8 @@ export class Slide2Component implements OnInit {
     )
   }
 
+  alertMessage() {
+    window.parent.postMessage('close', '*');
+  }
+
 }

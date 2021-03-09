@@ -65,26 +65,26 @@
                             {{equipo.equipment.equipment_details[0].adscreen[0].equipment_plan[0].cuote_number}} cuotas sin interés de
                         </p>
                         <h3 class="animated bounceInLeft" style="animation-delay:0.5s">
-                        <span class="hvr-pulse-shrink" style="animation-delay:1.5s">${{cuota}}</span></h3>
+                        <span class="hvr-pulse-shrink" style="animation-delay:1.5s">${{cuota  | safe:'price'}}</span></h3>
                     </div>
                     <div class="boxDetalles">
                         <div class="boxSvg position-right">
                             <img src="https://rinnolab.cl/media/upload/images/2021/02/orig/figure_entel.svg">
                         </div>
                         <div class="boxText">
-                            <div class="oferta mt-2">Precio oferta cliente: <b>${{equipo.equipment.equipment_details[0].adscreen[0].equipment_plan[0].price_1}}</b></div>
+                            <div class="oferta mt-2">Precio oferta cliente: <b>${{equipo.equipment.equipment_details[0].adscreen[0].equipment_plan[0].price_1 | safe:'price'}}</b></div>
                             <div class="subTitle animated bounceInLeft text-right" style="animation-delay:1.3s">
                                 Portándote a planes
                             </div>
                             <div class="desde animated bounceInLeft font-weight-bold text-right" style="animation-delay:1.5s">
                                 <span class="text-desde">desde</span> 
-                                <span class="hvr-pulse-shrink2">${{equipo.equipment.equipment_details[0].adscreen[0].plan[0].price_1}}</span>
+                                <span class="hvr-pulse-shrink2">${{equipo.equipment.equipment_details[0].adscreen[0].plan[0].price_1 | safe:'price'}}</span>
                             </div>
                             <div class="cargo mt-1">Cargo fijo mensual</div>
                             <div class="boxIcons mt-1">
                                 <img src="https://rinnolab.cl/media/upload/images/2020/11/orig/rrss.png">
                             </div>
-                            <div class="precioNoCliente">Precio no cliente: <b>${{equipo.equipment.equipment_details[0].price_1}}</b></div>
+                            <div class="precioNoCliente">Precio no cliente: <b>${{equipo.equipment.equipment_details[0].price_1 | safe:'price'}}</b></div>
                         </div>
                     </div>
                 </div><!--/main-->
@@ -98,7 +98,7 @@
                 <!--buttons-->
                 <div class="boxButtons">
                   
-                    <button type="button" class="btn btn-primary mr-3"  onclick="window.print.postMessage('close')">Ir al equipo</button>
+                    <button type="button" class="btn btn-primary mr-3"  (click)="alertMessage()">Ir al equipo</button>
 
                     <button type="button" class="btn btn-danger" routerLink="detail-accessory">llévame con este accesorio</button>
                    

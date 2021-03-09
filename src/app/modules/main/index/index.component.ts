@@ -33,18 +33,19 @@ export class IndexComponent implements OnInit {
 
 
   alertMessage() {
-    /*window.addEventListener('close',function(event) {
-    .postMessage('close');
-    });*/
+    window.parent.postMessage('close', '*');
   }
  
-
+ 
 
   getEquipments(){
     this.apiService.getEquipments().subscribe(
       data => {
         this.equipo = data
-        this.cuota = this.equipo.equipment.equipment_details[0].adscreen[0].equipment_plan[0].price_1 / this.equipo.equipment.equipment_details[0].adscreen[0].equipment_plan[0].cuote_number
+        let valor = this.equipo.equipment.equipment_details[0].adscreen[0].equipment_plan[0].price_1;
+        let cantCouta = this.equipo.equipment.equipment_details[0].adscreen[0].equipment_plan[0].cuote_number
+        let stringToNumber = valor.split('.').join('')
+        this.cuota = +stringToNumber / cantCouta
         console.log(this.equipo )
       }, 
       error => {
