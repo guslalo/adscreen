@@ -1,5 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { ApiService } from '../../../services/api.service'
+import { ObjectService } from '../../../services/object.service'
+
 declare var $:any
 
 
@@ -11,19 +13,17 @@ declare var $:any
 export class IndexComponent implements OnInit {
   public equipo:any
   public cuota:any
+  public spinner:boolean = true
 
-  constructor(public apiService: ApiService) { }
+  constructor(public apiService: ApiService, public objectService:ObjectService) { }
 
   ngOnInit(): void {
+    this.spinner = true;
     $('.carousel').carousel({
       interval: 10000
     })
-
     this.getEquipments()
-
-    
   }
-
 
   /*
   @HostListener('window:message', ['$event'])
@@ -31,13 +31,10 @@ export class IndexComponent implements OnInit {
       window.print.postMessage('close');
   }*/
 
-
   alertMessage() {
     window.parent.postMessage('close', '*');
   }
  
- 
-
   getEquipments(){
     this.apiService.getEquipments().subscribe(
       data => {
@@ -46,7 +43,9 @@ export class IndexComponent implements OnInit {
         let cantCouta = this.equipo.equipment.equipment_details[0].adscreen[0].equipment_plan[0].cuote_number
         let stringToNumber = valor.split('.').join('')
         this.cuota = +stringToNumber / cantCouta
-        console.log(this.equipo )
+        this.objectService.setObjectObs(data)
+        console.log(this.objectService.object)
+        this.spinner = false;
       }, 
       error => {
         console.log(error)

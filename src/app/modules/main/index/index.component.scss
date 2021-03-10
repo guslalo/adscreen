@@ -4,37 +4,38 @@
     
 .header                 { width:100%; display: inline-block; }
 .header .boxSvg         {  z-index: 0; }
-.header .boxSvg svg     { width:90%; position: absolute; top: -45px; left: 0px; }
+.header .boxSvg svg     { width:90%; position: absolute; top: -45px; left:-4px; }
 .header .boxText        { padding: 10px 20px; position: relative; z-index: 1; color: #ffffff;  }
 .header .boxText .marca { margin-bottom: 10px; }
+.header .boxText .marca img { max-width: 65px;}
 .header .boxText .title { margin-bottom: 5px; font-size: 1.5rem; line-height: 15px;}
 .header .boxText .color { }
 
 .main            { margin-top: 5px; display: inline-block; width: 100%; }
-.main .cuotas    { text-align: center; color:#055BFC; }
+.main .cuotas    { text-align: center; color:#055BFC; position: relative; top: 10px; }
 .main .cuotas p  { font-size: 1.2rem; margin:8px 0px 10px; font-style: italic; font-weight: 600; }
 .main .cuotas h3 { font-size: 4.2rem; line-height: 1.9rem; font-weight: bold; }
 
 .position-right svg                    { float: right; width: 90%;}
-.position-right img                    { float: right; width: 90%;}
+.position-right img                    { float: right; width: 88%;}
 .boxDetalles                           { position: relative; width:100%; }
 .boxDetalles .boxSvg                   { position: absolute; z-index: 0;  right: 0px; width: 100%; }
 .boxDetalles .boxText                  { 
     position: relative; z-index: 2; float: right; text-align:right; margin: 54px 0px 0px 1px; width:75%; 
     max-width: 300px; padding: 0px 20px 0px 0px;}
 .boxDetalles .boxText .oferta          { color: #FD6C98; font-size: 1.22rem;  }
-.boxDetalles .boxText .subTitle        { color: #055BFC; font-size: 1.3rem; margin: 1px 0px 0px 0px; text-align: right; }
-.boxDetalles .boxText .desde           { color: #055BFC; font-size: 2.3rem; line-height:25px;}
+.boxDetalles .boxText .subTitle        { color: #055BFC; font-size: 1.1rem; margin: 1px 0px 0px 0px; text-align: right; }
+.boxDetalles .boxText .desde           { color: #055BFC; font-size: 2.3rem; line-height:25px; position: relative;}
 .boxDetalles .boxText .cargo           { color: #055BFC; font-size: 1rem; text-align: right; }
 .boxDetalles .boxText .boxIcons img    { width: 75%; margin-top: 10px; }
-.boxDetalles .boxText .precioNoCliente { margin:25px 0px 0px 0px; color: #055BFC; font-size:1.2rem;}
+.boxDetalles .boxText .precioNoCliente { margin:25px 0px 0px 0px; color: #055BFC; font-size:1rem;}
 }
 
 .boxaudifonos {
-    margin-top: 38px;
+    margin-top:50px;
     .texts {
         position: relative;
-        top: 13px;
+        top: 13cpx;
         text-align: left;
         color: #FD6C98;
         display: inline-block;
@@ -44,5 +45,6 @@
 .text-desde {
     position: relative;
     top: 2px;
-    font-size: 25px;
+    margin-right: 3px;
+    font-size: 24px;
 }

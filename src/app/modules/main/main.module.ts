@@ -8,13 +8,16 @@ import { Slide3Component } from './sliders/slide3/slide3.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SafePipe } from './../../pipes/safe.pipe';
 
+import { SpinnerComponent } from './../../shared/spinner/spinner.component';
+
 
 @NgModule({
   declarations: [
     IndexComponent, 
     Slide2Component, 
     Slide3Component,
-    SafePipe
+    SafePipe,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +25,7 @@ import { SafePipe } from './../../pipes/safe.pipe';
     HttpClientModule
   ],
   exports: [
-    HttpClientModule,
+    HttpClientModule
   ]
 })
 

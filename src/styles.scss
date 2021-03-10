@@ -31,7 +31,7 @@ p, h3 { margin: 0px 0px; }
 }
 
 .wrap                   { 
-    width: 100%; height: auto; 
+    width: 100%; height: 100vh; 
     -webkit-animation: fadein 1.5s;
     -moz-animation: fadein 1.5s; 
     animation: fadein 1.5s;
@@ -46,6 +46,9 @@ p, h3 { margin: 0px 0px; }
 .boxButtons {
     text-align: center;
     margin-top: 20px;
+    position: absolute;
+    width: 100%;
+    bottom:50px;
     buttton {
         margin-right: 5px;
     }
@@ -118,10 +121,12 @@ animation-direction: alternate;
     transition-duration: 0.3s;
 }
 
-.carouselExampleIndicators {
+#carouselExampleIndicators {
     overflow:hidden;
+    height: 100vh !important;
+    position: relative;
 }
 
 .carousel-indicators {
-    bottom: -25px;
+    bottom: 0px;
 }

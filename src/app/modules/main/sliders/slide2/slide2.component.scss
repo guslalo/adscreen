@@ -11,10 +11,11 @@
 .header .boxSvg svg     { width:90%; position: absolute; top: -45px; left: 0px; }
 .header .boxText        { padding: 12px 20px; position: relative; z-index: 1; color: #ffffff;  }
 .header .boxText .marca { margin-bottom: 10px; }
+.header .boxText .marca img { max-width: 65px;}
 .header .boxText .title { margin-bottom: 5px; font-size: 1.5rem; line-height: 15px;}
 .header .boxText .color { }
 
-.main            { margin-top: 10px; display: inline-block; width: 100%; }
+.main            { margin-top:35px; display: inline-block; width: 100%; }
 .main .cuotas    { text-align: center; color:#055BFC; }
 .main .cuotas p  { font-size: 1.5rem; margin:7px 0px 10px;  }
 .main .cuotas h3 { font-size: 4.5rem; }
