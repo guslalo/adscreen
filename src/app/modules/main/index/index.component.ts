@@ -26,14 +26,15 @@ export class IndexComponent implements OnInit {
     $('.carousel').carousel({
     })
     this.getEquipments()
-    this.button = "<button type='button' id='btnCerrar' class='btn btn-primary mr-3' (click)='alertMessage()''>Ir al equipo</button>"
+    this.button = "<button type='button' id='btnCerrar' class='btn btn-primary mr-3' onclick='window.print.postMessage('close')' ''>Ir al equipo</button>"
   }
 
+/*
   ngAfterViewChecked (){
     if(this.elementRef.nativeElement.querySelector('#btnCerrar')){
-      this.elementRef.nativeElement.querySelector('#btnCerrar').addEventListener('click', this.alertMessage());
+      this.elementRef.nativeElement.querySelector('#btnCerrar').addEventListener('onclick', window.print.postMessage('close'));
     }
-  } 
+  } */
 
   /*
   @HostListener('window:message', ['$event'])
@@ -44,6 +45,7 @@ export class IndexComponent implements OnInit {
   alertMessage() {
     console.log('llegó a la funcion')
     window.parent.postMessage('close', '*');
+    //window.print.postMessage('close')
   }
  
   getEquipments(){
