@@ -23,7 +23,7 @@ export class IndexComponent implements OnInit {
     $('.carousel').carousel({
     })
     this.getEquipments()
-    this.button = "<button type='button' class='btn btn-primary mr-3' (click)='window.print.postMessage('close')''>Ir al equipo</button>"
+    this.button = "<button type='button' class='btn btn-primary mr-3' click='window.print.postMessage('close')''>Ir al equipo</button>"
   }
 
   /*
