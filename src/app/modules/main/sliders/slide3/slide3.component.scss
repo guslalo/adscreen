@@ -8,7 +8,7 @@
     
 .header                 { width:100%; display: inline-block;  z-index: 2;  position: relative;}
 .header .boxSvg         {  z-index: 0; }
-.header .boxSvg svg     { width:90%; position: absolute; top: -15px; left: 0px; }
+.header .boxSvg svg     { width:90%; position: absolute; top: -15px; left: -4px; }
 .header .boxText        { padding: 17px 33px; position: relative; z-index: 1; color: #ffffff;  }
 .header .boxText .marca { margin-bottom: 10px; }
 .header .boxText .title { margin-bottom: 5px; font-size: 1.5rem;}

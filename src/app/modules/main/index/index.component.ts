@@ -20,7 +20,6 @@ export class IndexComponent implements OnInit {
   ngOnInit(): void {
     this.spinner = true;
     $('.carousel').carousel({
-      interval: 10000
     })
     this.getEquipments()
   }
