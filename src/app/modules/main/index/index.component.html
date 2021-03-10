@@ -99,7 +99,9 @@
                 <!--buttons-->
                 <div class="boxButtons">
                   
-                    <button type="button" class="btn btn-primary mr-3"  (click)="alertMessage()">Ir al equipo</button>
+                    <span [innerHtml]="button  | safe:'html'">
+
+                    </span>
 
                     <button type="button" class="btn btn-danger" routerLink="detail-accessory">llévame con este accesorio</button>
                    

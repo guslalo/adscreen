@@ -14,6 +14,7 @@ export class IndexComponent implements OnInit {
   public equipo:any
   public cuota:any
   public spinner:boolean = true
+  public button:any;
 
   constructor(public apiService: ApiService, public objectService:ObjectService) { }
 
@@ -22,6 +23,7 @@ export class IndexComponent implements OnInit {
     $('.carousel').carousel({
     })
     this.getEquipments()
+    this.button = "<button type='button' class='btn btn-primary mr-3' onclick='window.print.postMessage('close')'>Ir al equipo</button>"
   }
 
   /*
