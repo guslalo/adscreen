@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef  } from '@angular/core';
 import { ApiService } from '../../../services/api.service'
 import { ObjectService } from '../../../services/object.service'
 
@@ -16,15 +16,24 @@ export class IndexComponent implements OnInit {
   public spinner:boolean = true
   public button:any;
 
-  constructor(public apiService: ApiService, public objectService:ObjectService) { }
+  constructor(
+    public apiService: ApiService, 
+    public objectService:ObjectService,
+    private elementRef:ElementRef) { }
 
   ngOnInit(): void {
     this.spinner = true;
     $('.carousel').carousel({
     })
     this.getEquipments()
-    this.button = "<button type='button' class='btn btn-primary mr-3' onClick='alertMessage()''>Ir al equipo</button>"
+    this.button = "<button type='button' id='btnCerrar' class='btn btn-primary mr-3' (click)='alertMessage()''>Ir al equipo</button>"
   }
+
+  ngAfterViewChecked (){
+    if(this.elementRef.nativeElement.querySelector('#btnCerrar')){
+      this.elementRef.nativeElement.querySelector('#btnCerrar').addEventListener('click', this.alertMessage());
+    }
+  } 
 
   /*
   @HostListener('window:message', ['$event'])
