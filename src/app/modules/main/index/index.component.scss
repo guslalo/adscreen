@@ -53,9 +53,16 @@
 }
 
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 370px) {
     .boxaudifonos {
         margin-top:50px;
+        
+    }
+}
+
+@media screen and (min-width: 385px) {
+    .boxaudifonos {
+        margin-top:111px;
         
     }
 }
