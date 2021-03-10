@@ -23,7 +23,7 @@ export class IndexComponent implements OnInit {
     $('.carousel').carousel({
     })
     this.getEquipments()
-    this.button = "<button type='button' class='btn btn-primary mr-3' onclick='window.print.postMessage('close')'>Ir al equipo</button>"
+    this.button = '<button type="button" class="btn btn-primary mr-3" (click)="postMessage()">Ir al equipo</button>'
   }
 
   /*
@@ -32,8 +32,8 @@ export class IndexComponent implements OnInit {
       window.print.postMessage('close');
   }*/
 
-  alertMessage() {
-    window.parent.postMessage('close', '*');
+  postMessage() {
+    window.parent.postMessage('close', 'https://eloquent-golick-649894.netlify.app/');
   }
  
   getEquipments(){
