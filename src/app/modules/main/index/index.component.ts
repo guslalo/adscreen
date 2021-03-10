@@ -23,7 +23,7 @@ export class IndexComponent implements OnInit {
     $('.carousel').carousel({
     })
     this.getEquipments()
-    this.button = "<button type='button' class='btn btn-primary mr-3' click='window.print.postMessage('close')''>Ir al equipo</button>"
+    this.button = "<button type='button' class='btn btn-primary mr-3' onClick='alertMessage()''>Ir al equipo</button>"
   }
 
   /*
@@ -33,6 +33,7 @@ export class IndexComponent implements OnInit {
   }*/
 
   alertMessage() {
+    console.log('llegó a la funcion')
     window.parent.postMessage('close', '*');
   }
  
@@ -47,6 +48,7 @@ export class IndexComponent implements OnInit {
         this.objectService.setObjectObs(data)
         console.log(this.objectService.object)
         this.spinner = false;
+        
       }, 
       error => {
         console.log(error)

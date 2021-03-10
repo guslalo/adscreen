@@ -9,11 +9,19 @@ import { ObjectService } from '../../../../services/object.service'
 
 export class Slide2Component implements OnInit {
   public equipo:any
+  public button:any;
   constructor(public objectService: ObjectService) { }
 
   ngOnInit(): void { 
     this.getEquipments()
+    this.button = "<button type='button' class='btn btn-primary mr-3' onClick='alertMessage()''>Ir al equipo</button>"
   }
+
+  alertMessage() {
+    console.log('llegó a la funcion')
+    window.parent.postMessage('close', '*');
+  }
+ 
 
   getEquipments(){
     this.objectService.getObjectObs().subscribe(
@@ -24,8 +32,7 @@ export class Slide2Component implements OnInit {
     )
   }
 
-  alertMessage() {
-    window.parent.postMessage('close', '*');
-  }
+ 
+ 
 
 }
