@@ -30,7 +30,7 @@
   "dataGroups": [
     {
     "name": "adscreen-api",
-    "urls": ["https://rinnolab.cl/devices/"],
+    "urls": ["https://rinnolab.cl/git"],
     "cacheConfig": {
       "strategy": "freshness",
       "maxSize": 300,
